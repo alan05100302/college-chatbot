@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Helpdesk Chatbot</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        #chatbox {
+            width: 400px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+        }
+        button {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chatbox">
+    <h3>College Helpdesk Chatbot</h3>
+    <div id="conversation"></div>
+    <input id="msg" placeholder="Ask a question">
+    <button onclick="send()">Send</button>
+</div>
+
+<script>
+function send() {
+    let message = document.getElementById("msg").value;
+    document.getElementById("conversation").innerHTML += 
+        "<p><b>You:</b> " + message + "</p>";
+
+    fetch("http://127.0.0.1:5000/chat", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({message: message})
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("conversation").innerHTML += 
+            "<p><b>Bot:</b> " + data.reply + "</p>";
+    });
+
+    document.getElementById("msg").value = "";
+}
+</script>
+
+</body>
+</html>

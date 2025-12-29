@@ -1,0 +1,9 @@
+User: when are exams?
+Bot: Exam schedules are announced on the notice board.
+
+User: what are the fee details
+Bot: Fee details are available in the college office or website.
+
+User: who is the vice principal?
+Bot: Sorry, I don't have an answer yet. Your question has been recorded.
+

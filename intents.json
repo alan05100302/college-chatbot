@@ -1,0 +1,47 @@
+{
+  "intents": [
+    {
+      "tag": "admission",
+      "patterns": [
+        "How to apply",
+        "Admission process",
+        "How can I get admission"
+      ],
+      "responses": [
+        "You can apply online through the college website."
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "What is the fee",
+        "Fee structure",
+        "How much is the fees"
+      ],
+      "responses": [
+        "Fee details are available in the college office or website."
+      ]
+    },
+    {
+      "tag": "exam",
+      "patterns": [
+        "When are exams",
+        "Exam schedule",
+        "Internal exam date"
+      ],
+      "responses": [
+        "Exam schedules are announced on the notice board."
+      ]
+    },
+    {
+      "tag": "vice_principal",
+      "patterns": [
+        "Who is the vice principal",
+        "Vice principal name"
+      ],
+      "responses": [
+        "The vice principal is Dr. XYZ."
+      ]
+    }
+  ]
+}
